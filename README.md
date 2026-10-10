@@ -31,7 +31,7 @@
 
 ### Now
 
-- **B.Sc. in Computer Science and Engineering**, Bangladesh University of Engineering and Technology (2025 to 2029). Currently in my 2nd year, grade 3.73, and ranked 18th nationally in the CSE admission examination
+- **B.Sc. in Computer Science and Engineering**, Bangladesh University of Engineering and Technology (2025 to 2029). 
 - **Online Instructor and Question Setter / Proofreader** (part-time) at Achieve EdTech, an edtech platform for engineering admission preparation. I record problem-solving masterclasses and write Mathematics and Physics assessments for the admission batch
 - **Independent tutor and mentor** since 2025: private tutoring in Mathematics, Physics, Chemistry and Science up to SSC level, remote mentoring for engineering admission candidates, and a first-year Computer Science course taught to a UCLA student
 
