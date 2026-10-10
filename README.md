@@ -31,7 +31,7 @@
 
 ### Now
 
-- **B.Sc. in Computer Science and Engineering**, Bangladesh University of Engineering and Technology (2025 to 2029). 
+- **B.Sc. in Computer Science and Engineering**, Bangladesh University of Engineering and Technology (2025 to 2029). Currently in my 2nd year, grade 3.73, and ranked 18th nationally in the CSE admission examination
 - **Online Instructor and Question Setter / Proofreader** (part-time) at Achieve EdTech, an edtech platform for engineering admission preparation. I record problem-solving masterclasses and write Mathematics and Physics assessments for the admission batch
 - **Independent tutor and mentor** since 2025: private tutoring in Mathematics, Physics, Chemistry and Science up to SSC level, remote mentoring for engineering admission candidates, and a first-year Computer Science course taught to a UCLA student
 
@@ -109,6 +109,10 @@ Open to internships, hackathons, case competitions, and full-stack roles.
 <p align="center">
   <img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Kairo-2081&theme=transparent" alt="GitHub stats" />
   <img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Kairo-2081&theme=transparent" alt="Top languages" />
+</p>
+
+<p align="center">
+  <img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Kairo-2081&theme=transparent" alt="GitHub profile details and contribution activity" />
 </p>
 
 ### Recognition
