@@ -31,7 +31,7 @@
 
 ### Now
 
-- **B.Sc. in Computer Science and Engineering**, Bangladesh University of Engineering and Technology (2025 to 2029).
+- **B.Sc. in Computer Science and Engineering**, Bangladesh University of Engineering and Technology (2025 to 2029). Currently in my 2nd year
 - **Online Instructor and Question Setter / Proofreader** (part-time) at Achieve EdTech, an edtech platform for engineering admission preparation. I record problem-solving masterclasses and write Mathematics and Physics assessments for the admission batch
 - **Independent tutor and mentor** since 2025: private tutoring in Mathematics, Physics, Chemistry and Science up to SSC level, remote mentoring for engineering admission candidates, and a first-year Computer Science course taught to a UCLA student
 
@@ -125,13 +125,9 @@ Open to internships, hackathons, case competitions, and full-stack roles.
 </p>
 
 <p align="center">
-  <img width="90%" src="https://github-readme-activity-graph.vercel.app/graph?username=Kairo-2081&bg_color=0d1117&color=e60023&line=e60023&point=ffffff&area=true&area_color=e60023&title_color=e60023&hide_border=true&custom_title=Contribution%20Graph" alt="Contribution graph" />
-</p>
-
-<p align="center">
-  <img width="90%" src="https://github-profile-trophy.vercel.app/?username=Kairo-2081&theme=radical&no-frame=true&no-bg=true&margin-w=4&column=7" alt="GitHub trophies" />
+  <img width="90%" src="https://ghchart.rshah.org/e60023/Kairo-2081" alt="Contribution calendar for Kairo-2081" />
 </p>
 
 ### Recognition
 
-Grand Finalist, BUET ME Mechathon (top 8 of 25 teams, NASA space debris removal problem) · Grand Finalist, BUET CSE Hackathon (top 8 of 20 teams, cross-university student networking platform)  · 4th Place Divisional, Bangladesh Physics Olympiad 2024
+Grand Finalist, BUET ME Mechathon (top 8 of 25 teams, NASA space debris removal problem) · Grand Finalist, BUET CSE Hackathon (top 8 of 20 teams, cross-university student networking platform) · 4th Place Divisional, Bangladesh Physics Olympiad 2024
