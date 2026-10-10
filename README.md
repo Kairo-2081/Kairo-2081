@@ -107,14 +107,18 @@ Open to internships, hackathons, case competitions, and full-stack roles.
 ### Stats
 
 <p align="center">
-  <img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Kairo-2081&theme=transparent" alt="GitHub stats" />
-  <img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Kairo-2081&theme=transparent" alt="Top languages" />
+  <img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Kairo-2081&theme=radical" alt="GitHub stats" />
+  <img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Kairo-2081&theme=radical" alt="Top languages" />
 </p>
 
 <p align="center">
-  <img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Kairo-2081&theme=transparent" alt="GitHub profile details and contribution activity" />
+  <img width="60%" src="https://streak-stats.demolab.com/?user=Kairo-2081&theme=radical&hide_border=true" alt="Current streak, longest streak and total contributions" />
+</p>
+
+<p align="center">
+  <img width="75%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Kairo-2081&theme=radical" alt="GitHub profile details and contribution activity" />
 </p>
 
 ### Recognition
 
-Grand Finalist, BUET ME Mechathon (top 8 of 25 teams, NASA space debris removal problem) · Grand Finalist, BUET CSE Hackathon (top 8 of 20 teams, cross-university student networking platform) · 18th nationally, CSE admission examination · 4th Place Divisional, Bangladesh Physics Olympiad 2024 · 1st in Barishal Board, HSC 2024 (GPA 5.00)
+Grand Finalist, BUET ME Mechathon (top 8 of 25 teams, NASA space debris removal problem) · Grand Finalist, BUET CSE Hackathon (top 8 of 20 teams, cross-university student networking platform) · 4th Place Divisional, Bangladesh Physics Olympiad 2024 
