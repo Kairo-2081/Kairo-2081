@@ -124,9 +124,6 @@ Open to internships, hackathons, case competitions, and full-stack roles.
   <img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Kairo-2081&theme=radical&utcOffset=6" alt="Productive time of day" />
 </p>
 
-<p align="center">
-  <img width="90%" src="https://ghchart.rshah.org/e60023/Kairo-2081" alt="Contribution calendar for Kairo-2081" />
-</p>
 
 ### Recognition
 
