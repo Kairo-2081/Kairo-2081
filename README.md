@@ -127,4 +127,4 @@ Open to internships, hackathons, case competitions, and full-stack roles.
 
 ### Recognition
 
-Grand Finalist, BUET ME Mechathon (top 8 of 25 teams, NASA space debris removal problem) · Grand Finalist, BUET CSE Hackathon (top 8 of 20 teams, cross-university student networking platform) · 4th Place Divisional, Bangladesh Physics Olympiad 2024
+Grand Finalist, BUET ME Mechathon (top 8 of 25 teams, NASA space debris removal problem) · Grand Finalist, BUET CSE Hackathon (top 8 of 20 teams, cross-university student networking platform) · 4th Place Divisional, Bangladesh Physics Olympiad 2024 
