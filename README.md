@@ -16,11 +16,14 @@
 </p>
 
 <p align="center">
+  <a href="https://kairo-2081.github.io/portfolio/"><img height="20" src="https://cdn.simpleicons.org/githubpages/24292f/e6edf3" alt="Portfolio" /></a>
+  &nbsp;&nbsp;
   <a href="https://github.com/Kairo-2081"><img height="20" src="https://cdn.simpleicons.org/github/24292f/e6edf3" alt="GitHub" /></a>
   &nbsp;&nbsp;
   <a href="https://www.linkedin.com/in/kairo2081/"><img height="20" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" /></a>
   &nbsp;&nbsp;
   <a href="mailto:2405010@ugrad.cse.buet.ac.bd"><img height="20" src="https://cdn.simpleicons.org/gmail/EA4335" alt="Email" /></a>
+
   <!-- Add a portfolio link here if you have one:
   &nbsp;&nbsp;
   <a href="https://your-portfolio-url"><img height="20" src="https://cdn.simpleicons.org/githubpages/24292f/e6edf3" alt="Portfolio" /></a>
