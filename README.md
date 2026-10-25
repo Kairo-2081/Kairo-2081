@@ -8,9 +8,6 @@
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=3000&pause=900&color=E60023&center=true&vCenter=true&width=700&lines=Full-Stack+Developer+%F0%9F%92%BB;Case-Solving+Competition+Enthusiast+%F0%9F%8F%86;Passionate+Educator+%F0%9F%93%9A;Building+in+Public+%F0%9F%9A%80" alt="Full-Stack Developer, Case-Solving Competition Enthusiast, Passionate Educator, Building in Public" />
 </a>
 
-<!-- COSMOS QUOTE -->
-<img src="assets/cosmos-quote.svg" width="100%" alt="Every dying star leaves behind the light for new ones to exist." />
-
 </div>
 
 <p align="center">
@@ -33,6 +30,12 @@
   -->
 </p>
 
+
+<!-- COSMOS QUOTE -->
+<p align="center">
+  <img src="cosmos-quote.svg" width="100%" alt="Every dying star leaves behind the light for new ones to exist." />
+</p>
+
 ---
 
 ### Now
@@ -42,6 +45,8 @@
 - **Independent tutor and mentor** since 2025: private tutoring in Mathematics, Physics, Chemistry and Science up to SSC level, remote mentoring for engineering admission candidates, and a first-year Computer Science course taught to a UCLA student
 
 Open to internships, hackathons, case competitions, and full-stack roles.
+
+
 
 ### Projects
 
