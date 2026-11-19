@@ -61,7 +61,7 @@ Open to internships, hackathons, case competitions, and full-stack roles.
 
 **[Bounce Classic: Modern Remake](https://github.com/Kairo-2081/Bounce-Classic)** · A modern recreation of the classic Bounce game, written in C.
 
-**[DataStructuresAndAlgorithms](https://github.com/Kairo-2081/DataStructuresAndAlgorithms)** · Data structure and algorithm implementations in C++.
+**[Data Structures & Algorithms in C++](https://github.com/Kairo-2081/DataStructuresAndAlgorithms)** · Data structure and algorithm implementations in C++.
 
 ### Stack
 
