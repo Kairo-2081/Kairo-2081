@@ -57,7 +57,7 @@ Open to internships, hackathons, case competitions, and full-stack roles.
 
 **[CSB 2.0: Campus Hub](https://github.com/Kairo-2081/CSB2.0)** · Full-stack community platform for university students, built as a team project at BUET. Forked repository, TypeScript.
 
-**[BookVerse / LibraryManager](https://github.com/Kairo-2081/LibraryManager)** · Library management system built with Java and JavaFX.
+**[BookVerse: Library Management System](https://github.com/Kairo-2081/LibraryManager)** · Library management system built with Java and JavaFX.
 
 **[Bounce-Classic](https://github.com/Kairo-2081/Bounce-Classic)** · Modern recreation of the classic Bounce game, written in C.
 
