@@ -55,7 +55,7 @@ Open to internships, hackathons, case competitions, and full-stack roles.
 
 **[GoCart: Multi-Vendor E-Commerce Platform](https://github.com/Kairo-2081/GoCart)** · Full-stack e-commerce platform with three dedicated portals: one for customers, one for merchants, and one for admins. TypeScript.
 
-**[CSB 2.0](https://github.com/Kairo-2081/CSB2.0)** · Campus Hub, a full-stack community platform for university students, built as a team project at BUET. Forked repository, TypeScript.
+**[CSB 2.0: Campus Hub](https://github.com/Kairo-2081/CSB2.0)** · Campus Hub, a full-stack community platform for university students, built as a team project at BUET. Forked repository, TypeScript.
 
 **[BookVerse / LibraryManager](https://github.com/Kairo-2081/LibraryManager)** · Library management system built with Java and JavaFX.
 
