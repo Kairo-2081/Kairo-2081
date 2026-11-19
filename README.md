@@ -53,7 +53,7 @@ Open to internships, hackathons, case competitions, and full-stack roles.
 **[ShopNiro: Multi-Vendor Marketplace](https://github.com/Kairo-2081/ShopNiro)** · Open-source, full-stack marketplace for multiple vendors. Customers shop, pay with bKash or SSLCOMMERZ, and track their orders; admin-approved sellers run their own stores; a Gemini-powered AI shopping assistant is built in. TypeScript.
 <!-- TODO: add the stack (e.g. Next.js, PostgreSQL) and a live demo link -->
 
-**[GoCart](https://github.com/Kairo-2081/GoCart)** · Full-stack multi-vendor e-commerce platform with separate customer, merchant, and admin portals. TypeScript.
+**[GoCart: Multi-Vendor E-Commerce Platform](https://github.com/Kairo-2081/GoCart)** · Full-stack multi-vendor e-commerce platform with separate customer, merchant, and admin portals. TypeScript.
 
 **[CSB 2.0](https://github.com/Kairo-2081/CSB2.0)** · Campus Hub, a full-stack community platform for university students, built as a team project at BUET. Forked repository, TypeScript.
 
