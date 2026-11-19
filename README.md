@@ -50,7 +50,7 @@ Open to internships, hackathons, case competitions, and full-stack roles.
 
 ### Projects
 
-**[ShopNiro](https://github.com/Kairo-2081/ShopNiro)** · Open-source, full-stack multi-vendor marketplace where customers shop, pay with bKash or SSLCOMMERZ, and track orders, while admin-approved sellers manage their own stores. Includes a Gemini-powered AI shopping assistant. TypeScript.
+**[ShopNiro: Multi-Vendor Marketplace](https://github.com/Kairo-2081/ShopNiro)** · Open-source, full-stack multi-vendor marketplace where customers shop, pay with bKash or SSLCOMMERZ, and track orders, while admin-approved sellers manage their own stores. Includes a Gemini-powered AI shopping assistant. TypeScript.
 <!-- TODO: add the stack (e.g. Next.js, PostgreSQL) and a live demo link -->
 
 **[GoCart](https://github.com/Kairo-2081/GoCart)** · Full-stack multi-vendor e-commerce platform with separate customer, merchant, and admin portals. TypeScript.
