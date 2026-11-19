@@ -50,18 +50,18 @@ Open to internships, hackathons, case competitions, and full-stack roles.
 
 ### Projects
 
-**[ShopNiro](https://github.com/Kairo-2081/ShopNiro)** · Open-source, full-stack multi-vendor marketplace where customers shop, pay with bKash or SSLCOMMERZ, and track orders, while admin-approved sellers manage their own stores. Includes a Gemini-powered AI shopping assistant. TypeScript.
+**[ShopNiro: Multi-Vendor Marketplace](https://github.com/Kairo-2081/ShopNiro)** · Open-source, full-stack marketplace for multiple vendors. Customers shop, pay with bKash or SSLCOMMERZ, and track their orders; admin-approved sellers run their own stores; a Gemini-powered AI shopping assistant is built in. TypeScript.
 <!-- TODO: add the stack (e.g. Next.js, PostgreSQL) and a live demo link -->
 
-**[GoCart](https://github.com/Kairo-2081/GoCart)** · Full-stack multi-vendor e-commerce platform with separate customer, merchant, and admin portals. TypeScript.
+**[GoCart: Multi-Vendor E-Commerce Platform](https://github.com/Kairo-2081/GoCart)** · Full-stack e-commerce platform with three dedicated portals: one for customers, one for merchants, and one for admins. TypeScript.
 
-**[CSB 2.0](https://github.com/Kairo-2081/CSB2.0)** · Campus Hub, a full-stack community platform for university students, built as a team project at BUET. Forked repository, TypeScript.
+**[CSB 2.0: Campus Hub](https://github.com/Kairo-2081/CSB2.0)** · Full-stack community platform for university students, built as a team project at BUET. Forked repository, TypeScript.
 
-**[BookVerse / LibraryManager](https://github.com/Kairo-2081/LibraryManager)** · Library management system built with Java and JavaFX.
+**[BookVerse: Library Management System](https://github.com/Kairo-2081/LibraryManager)** · Library management application written in Java with a JavaFX interface.
 
-**[Bounce-Classic](https://github.com/Kairo-2081/Bounce-Classic)** · Modern recreation of the classic Bounce game, written in C.
+**[Bounce Classic: Modern Remake](https://github.com/Kairo-2081/Bounce-Classic)** · A modern recreation of the classic Bounce game, written in C.
 
-**[DataStructuresAndAlgorithms](https://github.com/Kairo-2081/DataStructuresAndAlgorithms)** · Data structure and algorithm implementations in C++.
+**[Data Structures & Algorithms in C++](https://github.com/Kairo-2081/DataStructuresAndAlgorithms)** · Collection of data structure and algorithm implementations, written in C++.
 
 ### Stack
 
