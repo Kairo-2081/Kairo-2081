@@ -59,7 +59,7 @@ Open to internships, hackathons, case competitions, and full-stack roles.
 
 **[BookVerse: Library Management System](https://github.com/Kairo-2081/LibraryManager)** · Library management application written in Java with a JavaFX interface.
 
-**[Bounce-Classic](https://github.com/Kairo-2081/Bounce-Classic)** · Modern recreation of the classic Bounce game, written in C.
+**[Bounce Classic: Modern Remake](https://github.com/Kairo-2081/Bounce-Classic)** · Modern recreation of the classic Bounce game, written in C.
 
 **[DataStructuresAndAlgorithms](https://github.com/Kairo-2081/DataStructuresAndAlgorithms)** · Data structure and algorithm implementations in C++.
 
