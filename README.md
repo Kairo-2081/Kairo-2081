@@ -24,10 +24,6 @@
   &nbsp;&nbsp;
   <a href="mailto:2405010@ugrad.cse.buet.ac.bd"><img height="20" src="https://cdn.simpleicons.org/gmail/EA4335" alt="Email" /></a>
 
-  <!-- Add a portfolio link here if you have one:
-  &nbsp;&nbsp;
-  <a href="https://your-portfolio-url"><img height="20" src="https://cdn.simpleicons.org/githubpages/24292f/e6edf3" alt="Portfolio" /></a>
-  -->
 </p>
 
 
@@ -50,18 +46,29 @@ Open to internships, hackathons, case competitions, and full-stack roles.
 
 ### Projects
 
-**[ShopNiro: Multi-Vendor Marketplace](https://github.com/Kairo-2081/ShopNiro)** · Open-source, full-stack marketplace for multiple vendors. Customers shop, pay with bKash or SSLCOMMERZ, and track their orders; admin-approved sellers run their own stores; a Gemini-powered AI shopping assistant is built in. TypeScript.
-<!-- TODO: add the stack (e.g. Next.js, PostgreSQL) and a live demo link -->
+**[ShopNiro](https://github.com/Kairo-2081/ShopNiro)** · Multi-vendor marketplace for Bangladesh<br>
+Customers, sellers, delivery riders and admins share one order journey: checkout with cash on delivery, bKash or SSLCOMMERZ; sellers and riders approved by an admin; deliveries confirmed with a code the rider reads out; refunds and payouts on an append-only ledger; and a Groq-powered shopping assistant. Runs on the web, Android (Capacitor) and desktop (Electron), in English and Bangla.<br>
+<sub>React · TypeScript · Express · PostgreSQL · Playwright · <a href="https://shopniro.onrender.com/">Live site</a></sub>
 
-**[GoCart: Multi-Vendor E-Commerce Platform](https://github.com/Kairo-2081/GoCart)** · Full-stack e-commerce platform with three dedicated portals: one for customers, one for merchants, and one for admins. TypeScript.
+**[CSB 2.0](https://github.com/Kairo-2081/CSB2.0)** · Campus services for BUET students<br>
+Ten services behind one university-email sign-in: notices, lost and found, lend and borrow, a marketplace, complaints, bicycles, blood donors, animal welfare, faculty suggestions and a student directory. Every access rule lives in PL/pgSQL in a single schema file; posts hide themselves after three reports, admins can suspend accounts, and an admin dashboard charts campus activity. Started as a BUET team project; being prepared for a pilot.<br>
+<sub>React · TypeScript · Express · PostgreSQL (PL/pgSQL) · Render and Neon · <a href="https://csb2-sg-yhv2.onrender.com/">Live site</a></sub>
 
-**[CSB 2.0: Campus Hub](https://github.com/Kairo-2081/CSB2.0)** · Full-stack community platform for university students, built as a team project at BUET. Forked repository, TypeScript.
+**[GoCart](https://github.com/Kairo-2081/GoCart)** · Multi-vendor e-commerce with the rules in the database<br>
+A storefront, merchant tools and an admin governance console on one PostgreSQL schema. Stock, seller status and order history are enforced by 58 SQL functions, 8 triggers and a stored procedure: checkout locks the cart and products, checks stock and takes it in one transaction, and a trigger blocks suspended sellers.<br>
+<sub>React 19 · TypeScript · Express 4 · PostgreSQL (raw SQL) · Tailwind CSS 4</sub>
 
-**[BookVerse: Library Management System](https://github.com/Kairo-2081/LibraryManager)** · Library management application written in Java with a JavaFX interface.
+**[BookVerse](https://github.com/Kairo-2081/LibraryManager)** · Library management desktop app<br>
+Catalogue, members, issuing and returns with a three-book limit, daily overdue fines that stop growing once a book is back, and a socket-based chat room for members. Everything is saved to plain-text files, so it needs nothing but Java.<br>
+<sub>Java 21 · JavaFX · Gradle · Java sockets</sub>
 
-**[Bounce Classic: Modern Remake](https://github.com/Kairo-2081/Bounce-Classic)** · A modern recreation of the classic Bounce game, written in C.
+**[Bounce Classic](https://github.com/Kairo-2081/Bounce-Classic)** · Side-scrolling platformer<br>
+Roll and jump a ball through three levels of blocks, spikes and spiders, with health, a saved game and a leaderboard of top scores.<br>
+<sub>C++ · iGraphics (OpenGL, GLUT, SDL2) · Linux and Windows</sub>
 
-**[Data Structures & Algorithms in C++](https://github.com/Kairo-2081/DataStructuresAndAlgorithms)** · Collection of data structure and algorithm implementations, written in C++.
+**[Data Structures and Algorithms](https://github.com/Kairo-2081/DataStructuresAndAlgorithms)** · BUET CSE 106 and 208 coursework<br>
+Eleven topics from array lists to maximum flow: BSTs, AVL trees, heaps, binomial heaps, hashing with three collision strategies, graph components, divide and conquer, weighted edit distance and Ford-Fulkerson, with sample inputs and expected outputs.<br>
+<sub>C++17 · C</sub>
 
 ### Stack
 
