@@ -1,0 +1,47 @@
+name: Update Wrapped card
+
+on:
+  schedule:
+    - cron: "23 18 * * *" # 00:23 in Dhaka, just after each day ends
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/scripts/wrapped_card.py
+      - .github/workflows/wrapped-card.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: wrapped-card
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Rebuild card
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python .github/scripts/wrapped_card.py
+
+      # Committed as github-actions[bot] so these updates never count as your contributions.
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- gitshine-wrapped.svg; then
+            echo "Card unchanged."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add gitshine-wrapped.svg
+          git commit -m "Update Wrapped card"
+          git pull --rebase origin main
+          git push
