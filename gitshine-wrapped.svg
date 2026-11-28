@@ -379,6 +379,5 @@
 <rect x="865.6" y="313.4" width="12.6" height="12.6" rx="2.5" fill="#161b22"/>
 <rect x="865.6" y="329.2" width="12.6" height="12.6" rx="2.5" fill="#161b22"/>
 <text x="44" y="446" fill="#f0f6fc" font-size="20" font-weight="700">The Streak Keeper</text>
-<text x="44" y="472" fill="#8b949e" font-size="15">Kept a longer streak than 79% of GitHub's 500 most-followed developers</text>
 <text x="906" y="446" fill="#3fb950" font-size="17" text-anchor="end">gitshine.com/wrapped</text>
 </svg>
