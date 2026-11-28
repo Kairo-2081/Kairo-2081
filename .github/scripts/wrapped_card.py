@@ -118,13 +118,21 @@ def render(user, year, today):
     x0, y0 = PAD, 282
     jan1 = dt.date(year, 1, 1)
     start = jan1 - dt.timedelta(days=(jan1.weekday() + 1) % 7)
-    rects, day = [], jan1
+    columns, day, pulse = {}, jan1, ""
     while day.year == year:
         col, row = (day - start).days // 7, (day.weekday() + 1) % 7
         c = colors[level(counts.get(day, 0))] if day <= today else colors[0]
-        rects.append(f'<rect x="{x0 + col*pitch:.1f}" y="{y0 + row*pitch:.1f}" '
-                     f'width="{cell}" height="{cell}" rx="3" fill="{c}"/>')
+        x, y = x0 + col * pitch, y0 + row * pitch
+        columns.setdefault(col, []).append(
+            f'<rect x="{x:.1f}" y="{y:.1f}" width="{cell:.1f}" height="{cell:.1f}" rx="3" fill="{c}"/>')
+        if day == today:  # soft "live" ring around today's square
+            pulse = (f'<rect class="p" x="{x:.1f}" y="{y:.1f}" width="{cell:.1f}" height="{cell:.1f}" '
+                     f'rx="3" fill="none" stroke="#39d353" stroke-width="1.5"/>')
         day += dt.timedelta(days=1)
+    # Each week column sweeps in, left to right.
+    rects = [f'<g class="c" style="animation-delay:{0.35 + col * 0.018:.3f}s">{"".join(r)}</g>'
+             for col, r in sorted(columns.items())]
+    rects.append(pulse)
 
     name = esc(user.get("name") or USER)
     avatar = user["avatarData"]
@@ -148,10 +156,21 @@ def render(user, year, today):
         f'@font-face{{font-family:"{fam}";font-weight:{w};src:url(data:font/woff2;base64,{font_b64(f"{file}-{w}")}) format("woff2")}}'
         for fam, file, ws in (("G", "geist-sans", (500, 600)), ("GM", "geist-mono", (400, 500))) for w in ws)
 
+    stats_svg = "\n".join(f'<g class="f" style="animation-delay:{0.22 + i * 0.1:.2f}s">{st}</g>'
+                          for i, st in enumerate(stats))
+
     return f'''<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="{USER}'s {year} on GitHub: {total:,} contributions, {streak} day streak, top language {esc(top_lang)}">
 <style>{faces}
 .s{{font-family:"G",sans-serif;font-weight:600}}.n{{font-family:"G",sans-serif;font-weight:500}}
-.m{{font-family:"GM",monospace;font-weight:500}}.h{{font-family:"GM",monospace;font-weight:400}}</style>
+.m{{font-family:"GM",monospace;font-weight:500}}.h{{font-family:"GM",monospace;font-weight:400}}
+.c,.f{{transform-box:fill-box;transform-origin:center}}
+.c{{animation:pop .5s cubic-bezier(.2,.8,.2,1) both}}
+.f{{animation:rise .7s cubic-bezier(.2,.8,.2,1) both}}
+.p{{opacity:0;transform-box:fill-box;transform-origin:center;animation:ping 2.4s ease-out 2s infinite}}
+@keyframes pop{{from{{opacity:0;transform:scale(.4)}}to{{opacity:1;transform:none}}}}
+@keyframes rise{{from{{opacity:0;transform:translateY(8px)}}to{{opacity:1;transform:none}}}}
+@keyframes ping{{0%{{opacity:.9;transform:scale(1)}}70%,100%{{opacity:0;transform:scale(2.1)}}}}
+@media (prefers-reduced-motion:reduce){{.c,.f,.p{{animation:none}}}}</style>
 <defs>
 <clipPath id="av"><circle cx="66" cy="70" r="22"/></clipPath>
 <radialGradient id="glow" cx="0.82" cy="0.78" r="0.55"><stop offset="0" stop-color="#2ea043" stop-opacity="0.10"/><stop offset="1" stop-color="#2ea043" stop-opacity="0"/></radialGradient>
@@ -159,13 +178,17 @@ def render(user, year, today):
 <rect width="{W}" height="{H}" rx="14" fill="#0d1117"/>
 <rect width="{W}" height="{H}" rx="14" fill="url(#glow)"/>
 <rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="13.5" fill="none" stroke="#f0f6fc" stroke-opacity="0.08"/>
+<g class="f" style="animation-delay:0s">
 <image x="44" y="48" width="44" height="44" clip-path="url(#av)" xlink:href="{avatar}" href="{avatar}"/>
 <circle cx="66" cy="70" r="22.5" fill="none" stroke="#f0f6fc" stroke-opacity="0.15"/>
 <text x="102" y="66" class="s" font-size="18" letter-spacing="-0.2" fill="#f0f6fc">{name}</text>
 <text x="102" y="87" class="h" font-size="13" fill="#7d8590">@{USER}</text>
+</g>
+<g class="f" style="animation-delay:.12s">
 <text x="{PAD - 4}" y="208" class="s" font-size="96" letter-spacing="-4.5" fill="#f0f6fc">{big}</text>
 <text x="{PAD}" y="240" class="m" font-size="11.5" letter-spacing="1.6" fill="#7d8590">{cap}</text>
-{chr(10).join(stats)}
+</g>
+{stats_svg}
 {grid}
 </svg>
 ''', total, streak, top_lang
