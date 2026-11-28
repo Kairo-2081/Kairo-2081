@@ -55,11 +55,27 @@ query($login: String!, $from: DateTime!, $to: DateTime!) {
 """
 
 
-def fetch(year, today):
-    body = json.dumps({"query": QUERY, "variables": {
-        "login": USER,
-        "from": f"{year}-01-01T00:00:00Z",
-        "to": f"{today.isoformat()}T23:59:59Z",
+# Commits per repository per day. One node per repo per day, so a window of
+# at most 92 days always fits in a single page of 100.
+COMMITS_QUERY = """
+query($login: String!, $from: DateTime!, $to: DateTime!) {
+  user(login: $login) {
+    contributionsCollection(from: $from, to: $to) {
+      commitContributionsByRepository(maxRepositories: 100) {
+        contributions(first: 100) {
+          pageInfo { hasNextPage }
+          nodes { occurredAt commitCount }
+        }
+      }
+    }
+  }
+}
+"""
+
+
+def gql(query, start, end):
+    body = json.dumps({"query": query, "variables": {
+        "login": USER, "from": f"{start.isoformat()}T00:00:00Z", "to": f"{end.isoformat()}T23:59:59Z",
     }}).encode()
     req = urllib.request.Request("https://api.github.com/graphql", data=body, headers={
         "Authorization": f"bearer {os.environ['GITHUB_TOKEN']}",
@@ -69,7 +85,29 @@ def fetch(year, today):
         data = json.load(r)
     if data.get("errors"):
         sys.exit(f"GraphQL error: {data['errors']}")
-    user = data["data"]["user"]
+    return data["data"]["user"]
+
+
+def commit_days(year, today):
+    per_day = Counter()
+    for q_start in (1, 4, 7, 10):
+        start = dt.date(year, q_start, 1)
+        if start > today:
+            break
+        end = min(dt.date(year + (q_start == 10), (q_start + 2) % 12 + 1, 1) - dt.timedelta(days=1), today)
+        cc = gql(COMMITS_QUERY, start, end)["contributionsCollection"]
+        for repo in cc["commitContributionsByRepository"]:
+            conn = repo["contributions"]
+            if conn["pageInfo"]["hasNextPage"]:
+                sys.exit("Unexpected: more than 100 commit days for one repo in a quarter")
+            for n in conn["nodes"]:
+                per_day[n["occurredAt"][:10]] += n["commitCount"]
+    return dict(per_day)
+
+
+def fetch(year, today):
+    user = gql(QUERY, dt.date(year, 1, 1), today)
+    user["commitDays"] = commit_days(year, today)
     with urllib.request.urlopen(user["avatarUrl"], timeout=30) as r:
         user["avatarData"] = f"data:{r.headers.get_content_type()};base64,{base64.b64encode(r.read()).decode()}"
     return user
@@ -144,13 +182,27 @@ def render(user, year, today):
     big_w = measure(big, "geist-sans-600", 96, -4.5)
     cap = f"CONTRIBUTIONS IN {year}{so_far.upper()}"
     cap_w = measure(cap, "geist-mono-500", 11.5, 1.6)
-    stats, x = [], PAD + max(big_w, cap_w) + 56
-    for value, label in ((str(streak), "DAY STREAK"), (top_lang, "TOP LANGUAGE")):
+    best = max(user.get("commitDays", {}).values(), default=0)
+    items = [(str(streak), "DAY STREAK"), (top_lang, "TOP LANGUAGE"), (f"{best:,}", "MOST COMMITS IN A DAY")]
+
+    # Fit the stats row inside the card: shrink the gaps first, then the type.
+    left = PAD + max(big_w, cap_w)
+    room = W - PAD - left
+    scale = 1.0
+    while True:
+        widths = [max(measure(v, "geist-sans-600", 36 * scale, -1 * scale),
+                      measure(lb, "geist-mono-500", 11.5 * scale, 1.6 * scale)) for v, lb in items]
+        gap = min(56.0, (room - sum(widths)) / len(items))
+        if gap >= 36 or scale <= 0.6:
+            break
+        scale -= 0.04
+    stats, x = [], left + gap
+    for (value, label), w in zip(items, widths):
         stats.append(
-            f'<line x1="{x - 28:.1f}" y1="160" x2="{x - 28:.1f}" y2="244" stroke="#21262d"/>\n'
-            f'<text x="{x:.1f}" y="208" class="s" font-size="36" letter-spacing="-1" fill="#f0f6fc">{esc(value)}</text>\n'
-            f'<text x="{x:.1f}" y="240" class="m" font-size="11.5" letter-spacing="1.6" fill="#7d8590">{label}</text>')
-        x += max(measure(value, "geist-sans-600", 36, -1), measure(label, "geist-mono-500", 11.5, 1.6)) + 56
+            f'<line x1="{x - gap / 2:.1f}" y1="160" x2="{x - gap / 2:.1f}" y2="244" stroke="#21262d"/>\n'
+            f'<text x="{x:.1f}" y="208" class="s" font-size="{36 * scale:.1f}" letter-spacing="{-1 * scale:.2f}" fill="#f0f6fc">{esc(value)}</text>\n'
+            f'<text x="{x:.1f}" y="240" class="m" font-size="{11.5 * scale:.2f}" letter-spacing="{1.6 * scale:.2f}" fill="#7d8590">{label}</text>')
+        x += w + gap
 
     faces = "".join(
         f'@font-face{{font-family:"{fam}";font-weight:{w};src:url(data:font/woff2;base64,{font_b64(f"{file}-{w}")}) format("woff2")}}'
@@ -159,7 +211,7 @@ def render(user, year, today):
     stats_svg = "\n".join(f'<g class="f" style="animation-delay:{0.22 + i * 0.1:.2f}s">{st}</g>'
                           for i, st in enumerate(stats))
 
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="{USER}'s {year} on GitHub: {total:,} contributions, {streak} day streak, top language {esc(top_lang)}">
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="{USER}'s {year} on GitHub: {total:,} contributions, {streak} day streak, top language {esc(top_lang)}, {best:,} commits on the best day">
 <style>{faces}
 .s{{font-family:"G",sans-serif;font-weight:600}}.n{{font-family:"G",sans-serif;font-weight:500}}
 .m{{font-family:"GM",monospace;font-weight:500}}.h{{font-family:"GM",monospace;font-weight:400}}
