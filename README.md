@@ -146,7 +146,7 @@ Eleven topics from array lists to maximum flow: BSTs, AVL trees, heaps, binomial
 
 <div align="center">
 
-[![Kairo-2081's 2026 on GitHub](https://gitshine.com/api/wrapped-og?username=Kairo-2081&year=2026)](https://gitshine.com/wrapped/Kairo-2081)
+[![Kairo-2081's 2026 on GitHub](gitshine-wrapped.svg)](https://gitshine.com/wrapped/Kairo-2081)
 
 </div>
 
