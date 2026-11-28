@@ -148,3 +148,5 @@ Eleven topics from array lists to maximum flow: BSTs, AVL trees, heaps, binomial
 Grand Finalist, BUET ME Mechathon (top 8 of 25 teams, NASA space debris removal problem) · Grand Finalist, BUET CSE Hackathon (top 8 of 20 teams, cross-university student networking platform) · 4th Place Divisional, Bangladesh Physics Olympiad 2024
 
 [![Kairo-2081's GitHub stats](https://gitshine.com/card/Kairo-2081)](https://gitshine.com/stats/Kairo-2081)
+
+[![Kairo-2081's GitHub stats](https://gitshine.com/card/Kairo-2081?theme=dracula&layout=wrapped)](https://gitshine.com/stats/Kairo-2081)
