@@ -26,11 +26,7 @@
 
 </p>
 
-<div align="center">
 
-[![Kairo-2081's 2026 on GitHub](https://gitshine.com/api/wrapped-og?username=Kairo-2081&year=2026)](https://gitshine.com/wrapped/Kairo-2081)
-
-</div>
 
 
 <!-- COSMOS QUOTE -->
@@ -148,6 +144,11 @@ Eleven topics from array lists to maximum flow: BSTs, AVL trees, heaps, binomial
   <img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Kairo-2081&theme=radical&utcOffset=6" alt="Productive time of day" />
 </p>
 
+<div align="center">
+
+[![Kairo-2081's 2026 on GitHub](https://gitshine.com/api/wrapped-og?username=Kairo-2081&year=2026)](https://gitshine.com/wrapped/Kairo-2081)
+
+</div>
 
 ### Recognition
 
