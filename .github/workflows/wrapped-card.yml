@@ -9,6 +9,7 @@ on:
     paths:
       - .github/scripts/wrapped_card.py
       - .github/workflows/wrapped-card.yml
+      - .github/fonts/**
 
 permissions:
   contents: write
@@ -26,6 +27,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
+      - name: Install font tools
+        run: pip install fonttools brotli
 
       - name: Rebuild card
         env:
