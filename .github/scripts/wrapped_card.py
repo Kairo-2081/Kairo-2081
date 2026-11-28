@@ -106,15 +106,14 @@ def render(user, year, today):
     font = "Inter,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif"
     so_far = " so far" if today.year == year and today < dt.date(year, 12, 31) else ""
     grid = "\n".join(rects)
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="956" height="505" viewBox="0 0 956 505" role="img" aria-label="{USER}'s {year} on GitHub: {total:,} contributions, {streak} day streak, top language {esc(top_lang)}">
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="956" height="420" viewBox="0 0 956 420" role="img" aria-label="{USER}'s {year} on GitHub: {total:,} contributions, {streak} day streak, top language {esc(top_lang)}">
 <style>text{{font-family:{font}}}</style>
 <defs><clipPath id="av"><circle cx="66" cy="72" r="23"/></clipPath></defs>
-<rect width="956" height="505" rx="12" fill="#0d1117"/>
+<rect width="956" height="420" rx="12" fill="#0d1117"/>
 <circle cx="66" cy="72" r="25" fill="#3b82f6"/>
 <image x="43" y="49" width="46" height="46" clip-path="url(#av)" xlink:href="{avatar}" href="{avatar}"/>
 <text x="102" y="70" fill="#f0f6fc" font-size="20" font-weight="700">{name}</text>
 <text x="102" y="90" fill="#8b949e" font-size="15">@{USER}</text>
-<text x="906" y="78" fill="#8b949e" font-size="17" text-anchor="end">GitHub Wrapped {year}</text>
 <text x="40" y="200" fill="#f0f6fc" font-size="80" font-weight="800" letter-spacing="-3">{total:,}</text>
 <text x="44" y="234" fill="#8b949e" font-size="19">contributions in {year}{so_far}</text>
 <text x="336" y="206" fill="#f0f6fc" font-size="28" font-weight="700">{streak}</text>
@@ -122,8 +121,6 @@ def render(user, year, today):
 <text x="442" y="206" fill="#f0f6fc" font-size="28" font-weight="700">{esc(top_lang)}</text>
 <text x="442" y="229" fill="#8b949e" font-size="15">top language</text>
 {grid}
-<text x="44" y="446" fill="#f0f6fc" font-size="20" font-weight="700">The Streak Keeper</text>
-<text x="906" y="446" fill="#3fb950" font-size="17" text-anchor="end">gitshine.com/wrapped</text>
 </svg>
 ''', total, streak, top_lang
 
